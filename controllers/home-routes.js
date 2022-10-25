@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Dream } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -12,6 +12,65 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/newdream', withAuth, async (req, res) => {
+  try {
+    res.render('newdream', {
+      loggedIn: req.session.loggedIn,
+      loggedUser: req.session.loggedUser,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/mydreams', withAuth, async (req, res) => {
+  try {
+    const dbDreamData = await Dream.findAll({
+      where: {
+        user_id: req.session.loggedUser
+      }
+    });
+
+    const dreams = dbDreamData.map((dream) =>
+      dream.get({ plain: true })
+    );
+
+    res.render('mydreams', {
+      projects,
+      loggedIn: req.session.loggedIn,
+      loggedUser: req.session.loggedUser,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/user/:id', withAuth, async (req, res) => {
+  try {
+    const dbDreamData = await Dream.findAll({
+      where: {
+        user_id: req.params.id
+      }
+    });
+
+    const dreams = dbDreamData.map((dream) =>
+      dream.get({ plain: true })
+    );
+
+    res.render('userdreams', {
+      dreams,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {

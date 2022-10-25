@@ -32,7 +32,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [6],
+        len: [3,20],
       },
     },
   },
@@ -43,6 +43,13 @@ User.init(
         return newUserData;
       },
     },
+    // hooks: {
+    //   async beforeCreate(newUserData) {
+    //     newUserData.login = await newUserData.login.toLowerCase();
+    //     return newUserData
+    //   },
+    //   beforeUpdate: async (updatedU)
+    // },
     sequelize,
     timestamps: false,
     freezeTableName: true,
