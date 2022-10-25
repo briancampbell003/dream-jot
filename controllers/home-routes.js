@@ -38,7 +38,7 @@ router.get('/mydreams', withAuth, async (req, res) => {
     );
 
     res.render('mydreams', {
-      projects,
+      dreams,
       loggedIn: req.session.loggedIn,
       loggedUser: req.session.loggedUser,
     });
@@ -70,7 +70,17 @@ router.get('/user/:id', withAuth, async (req, res) => {
   }
 });
 
+router.get('/dream/:id', withAuth, async (req, res) => {
+  try {
+    const dbDreamData = await Dream.findByPk(req.params.id, {});
 
+    const dream = dbDreamData.get({ plain: true });
+    res.render('singledream', { dream, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {

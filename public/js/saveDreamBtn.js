@@ -3,12 +3,11 @@ const saveDreamBtnHandler = async (event) => {
     console.log("save dream button has been pressed!!");
     let today = new Date().toLocaleDateString();
     const newDream = {
-      title: ,
+      title: "Dream Title",
       content : document.querySelector('#new-dream-content').value.trim(),
       date : today,
-      user_id: ,
-      tag: ,
-      lucid: ,
+      // tag: ,
+      // lucid: ,
     }
       
 
