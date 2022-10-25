@@ -17,14 +17,19 @@ Dream.init(
         },
         title: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
         content: {
             type: DataTypes.STRING,
             allowNull: false,
         },
+        date: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
             references: {
               model: 'user',
               key: 'id',
@@ -35,8 +40,8 @@ Dream.init(
             allowNull: true,
         },
         lucid: {
-            DataTypes: Boolean,
-            allowNull: false,
+            type: DataTypes.BOOLEAN,
+            allowNull: true,
         }
     },
     {

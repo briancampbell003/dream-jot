@@ -35,6 +35,10 @@ header {
   color: var(--light);
 }
 
+/* .jumbotron {
+  background-image: url(/public/images/DreamBanner.jpg)
+} */
+
 main {
   display: flex;
   flex-wrap: wrap;
