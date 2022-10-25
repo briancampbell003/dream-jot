@@ -3,10 +3,16 @@ const saveDreamBtnHandler = async (event) => {
     console.log("save dream button has been pressed!!");
     let today = new Date().toLocaleDateString();
     const newDream = {
+      title: ,
       content : document.querySelector('#new-dream-content').value.trim(),
       date : today,
+      user_id: ,
+      tag: ,
+      lucid: ,
     }
       
+
+
     console.log(newDream);
     if (newDream) {
       const response = await fetch('/api/dreams', {
