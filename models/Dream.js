@@ -31,18 +31,26 @@ Dream.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-              model: 'user',
-              key: 'id',
+                model: 'user',
+                key: 'id',
             },
-          },
+        },
         tag: {
             type: DataTypes.STRING,
             allowNull: true,
         },
+        private: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
         lucid: {
             type: DataTypes.BOOLEAN,
             allowNull: true,
-        }
+        },
+        nightmare: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
     },
     {
         sequelize,

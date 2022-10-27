@@ -1,7 +1,15 @@
 <form class="form new-dream-form">
     <div class="form-group">
+        <label for="content">(Optional) Title:</label>
+        <input class="form-input" type="text" id="new-dream-title" />
         <label for="content">I dreamt...</label>
         <input class="form-input" type="text" id="new-dream-content" />
+
+        <div class="form-group">
+            <label for="customRange2" class="form_label">Intensity:</label>
+            <input type="range" class="form-range" min="0" max="100" id="nightmare-meter">
+        </div>
+
     </div>
     <div class="form-group">
         <button class="btn btn-primary save-dream-btn" type="submit">save dream</button>

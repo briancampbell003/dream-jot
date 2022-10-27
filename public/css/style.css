@@ -1,10 +1,10 @@
 :root {
-  --primary: #640e7c;
-  --secondary: #908693;
-  --tertiary: #85508f;
-  --quatrinary: #6a676c;
+  --primary: rgb(0, 0, 0);
+  --secondary: #c5b6f1;
+  --tertiary: #9886b3;
+  --quatrinary: #9f92c5;
   --light: #e3e4e3;
-  --dark: #182c23;
+  --dark: #524171;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
 }
@@ -35,9 +35,7 @@ header {
   color: var(--light);
 }
 
-/* .jumbotron {
-  background-image: url(/public/images/DreamBanner.jpg)
-} */
+
 
 main {
   display: flex;

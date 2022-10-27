@@ -7,8 +7,10 @@ const dreamdata = [
     content: 'Sun setting in the horizon with waves lapping the shore.',
     date: 'August 14, 2016',
     user_id: 1,
-    tag: 'nice',
+    tag: 'pleasant',
+    private: false,
     lucid: false,
+    nightmare: 0,
   },
   {
     title: 'Frozen River',
@@ -16,7 +18,9 @@ const dreamdata = [
     date: 'August 19, 2016',
     user_id: 1,
     tag: 'pleasant',
-    lucid: false,
+    private: false,
+    lucid: true,
+    nightmare: 5,
   },
   {
     title: 'Forgot to study',
@@ -24,7 +28,9 @@ const dreamdata = [
     date: 'August 20, 2016',
     user_id: 2,
     tag: 'nightmare',
+    private: false,
     lucid: false,
+    nightmare: 85,
   },
   {
     title: 'Scary robots',
@@ -32,15 +38,19 @@ const dreamdata = [
     date: 'August 22, 2016',
     user_id: 2,
     tag: 'nightmare',
+    private: false,
     lucid: false,
+    nightmare: 99,
   },
   {
     title: 'Castle rescue mission',
     content: 'Going on an epic journey to rescue my cousin from a castle',
     date: 'August 23, 2016',
     user_id: 2,
-    tag: 'cool',
+    tag: 'adventure',
+    private: false,
     lucid: true,
+    nightmare: 50,
   },
 
 ];

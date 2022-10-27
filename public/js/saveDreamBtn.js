@@ -2,17 +2,20 @@ const saveDreamBtnHandler = async (event) => {
     event.preventDefault();
     console.log("save dream button has been pressed!!");
     let today = new Date().toLocaleDateString();
+
     const newDream = {
       title: "Dream Title",
       content : document.querySelector('#new-dream-content').value.trim(),
       date : today,
-      // tag: ,
-      // lucid: ,
+      nightmare : document.querySelector('#nightmare-meter').value,
+      private : false,
     }
-      
 
 
+    console.log(document.querySelector('#new-dream-content'));
+    console.log(document.querySelector('#nightmare-meter'));
     console.log(newDream);
+    
     if (newDream) {
       const response = await fetch('/api/dreams', {
         method: 'POST',
@@ -21,7 +24,6 @@ const saveDreamBtnHandler = async (event) => {
       });
 
       if (response.ok) {
-        console.log("JS COMMENT RESPONSE OKAYYYYYYYYYYYYYYYY");
         document.location.replace('/mydreams');
       } else {
         alert('Failed to post your new dream.');

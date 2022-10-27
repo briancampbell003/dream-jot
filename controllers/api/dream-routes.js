@@ -10,14 +10,14 @@ router.post("/", async (req, res) => {
       date: req.body.date,
       content: req.body.content,
       tag: req.body.tag,
+      private: req.body.private,
       lucid: req.body.lucid,
-      /* check it later*/
       user_id: req.session.loggedUser,
+      nightmare: req.body.nightmare,
     });
 
     req.session.save(() => {
       req.session.loggedIn = true;
-
       res.status(200).json(dbDreamData);
     });
   } catch (err) {
@@ -25,8 +25,5 @@ router.post("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
-
 
 module.exports = router;
