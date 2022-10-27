@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const session = require("express-session");
 const { Dream } = require("../../models");
 
 // CREATE new dream
@@ -6,13 +7,14 @@ router.post("/", async (req, res) => {
   try {
     const dbDreamData = await Dream.create({
       title: req.body.title,
+      date: req.body.date,
       content: req.body.content,
       tag: req.body.tag,
       lucid: req.body.lucid,
       /* check it later*/
-      user_id: req.body.user_id,
+      user_id: req.session.loggedUser,
     });
-    // console.log(dbDreamData)
+
     req.session.save(() => {
       req.session.loggedIn = true;
 
