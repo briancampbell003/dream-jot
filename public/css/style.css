@@ -1,10 +1,10 @@
 :root {
-  --primary: #3d5852;
-  --secondary: #86938f;
-  --tertiary: #5e877f;
-  --quatrinary: #6c6b67;
+  --primary: rgb(0, 0, 0);
+  --secondary: #c5b6f1;
+  --tertiary: #9886b3;
+  --quatrinary: #9f92c5;
   --light: #e3e4e3;
-  --dark: #182c23;
+  --dark: #524171;
   --error: rgb(228, 46, 1);
   --border-radius: 0.3rem;
 }
@@ -35,8 +35,17 @@ header {
   color: var(--light);
 }
 
+
+
 main {
   display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.card-holder{
+  display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   flex-grow: 1;
 }
@@ -51,6 +60,7 @@ aside {
 
 nav {
   display: flex;
+  justify-content: space-evenly;
   background-color: var(--secondary);
 }
 
@@ -161,4 +171,59 @@ img {
   flex-flow: column wrap;
   align-content: flex-start;
   align-items: center;
+}
+
+#bannerImg {
+  position: relative;
+  top: 0px;
+  align-items: center;
+}
+
+#newDreamLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.user-link {
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.user-head-div {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  padding: 10px;
+}
+
+.user-head {
+  border: black 2px solid;
+  font-size: 60px;
+  padding: 10px;
+}
+
+.new-dream-btn{
+  position: absolute;
+  margin-left: auto;
+}
+
+.new-dream-card-head{
+  font-style: italic;
+  color: blanchedalmond;
+}
+
+.new-dream-card-body{
+  font-style: italic;
+  background-color: rgb(245, 245, 245);
+  border-color: #c7ed71;
 }

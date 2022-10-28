@@ -1,0 +1,9 @@
+<div class="user-head-div">
+    <h2>dream log belonging to...</h2>
+    <h2 class="user-head">{{username}}</h2>
+</div>
+<div class="card-holder">
+    {{#each dreams as |dream|}}
+    {{> dream-card}}
+    {{/each}}
+</div>

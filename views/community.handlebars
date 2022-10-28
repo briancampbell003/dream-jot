@@ -1,0 +1,11 @@
+<aside>
+    {{#each users as |user|}}
+    {{> user-link}}
+    {{/each}}
+</aside>
+
+<container class="flex-row justify-center">
+    {{#each dreams as |dream|}}
+    {{> dream-card}}
+    {{/each}}
+<container>
