@@ -1,12 +1,20 @@
-<container>
-{{#each dreams as |dream|}}
-{{> dream-card}}
-{{/each}}
+<div class="card-holder">
+    {{#each dreams as |dream|}}
+    {{> dream-card}}
+    {{/each}}
+    <section class="card">
+        <a href="/newDream">
+            <header class="new-dream-card-head">New dream</header>
 
-<div class="form-group">
-    <button class="btn btn-primary new-dream-btn" type="click">new dream</button>
+            <div class="card-body new-dream-card-body">
+                Click here to post a new dream...
+            </div>
+
+        </a>
+    </section>
 </div>
-</container>
+
+{{!-- <button class="btn btn-primary new-dream-btn justify-center" type="click">new dream</button> --}}
 
 
 <script src="/js/newDreamBtn.js"></script>

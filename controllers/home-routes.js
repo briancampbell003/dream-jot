@@ -77,7 +77,11 @@ router.get('/user/:id', withAuth, async (req, res) => {
 
 router.get('/dream/:id', withAuth, async (req, res) => {
   try {
-    const dbDreamData = await Dream.findByPk(req.params.id, {});
+    const dbDreamData = await Dream.findByPk(req.params.id, {
+      include: [
+        { model: User }
+      ]
+    });
     const dream = dbDreamData.get({ plain: true });
     res.render('singledream', { dream, loggedIn: req.session.loggedIn });
   } catch (err) {
@@ -88,14 +92,24 @@ router.get('/dream/:id', withAuth, async (req, res) => {
 
 router.get('/community', withAuth, async (req, res) => {
   try {
-    const dbDreamData = await Dream.findAll({});
+    const dbDreamData = await Dream.findAll({
+      where: {
+        private: false,
+      }
+    });
+    const dbUserData = await User.findAll({});
 
     const dreams = dbDreamData.map((dream) =>
       dream.get({ plain: true })
     );
 
+    const users = dbUserData.map((user) =>
+      user.get({ plain: true })
+    );
+
     res.render('community', {
       dreams,
+      users,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {

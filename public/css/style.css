@@ -43,6 +43,13 @@ main {
   flex-grow: 1;
 }
 
+.card-holder{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
 aside {
   flex: 0;
   background-color: var(--tertiary);
@@ -53,6 +60,7 @@ aside {
 
 nav {
   display: flex;
+  justify-content: space-evenly;
   background-color: var(--secondary);
 }
 
@@ -180,4 +188,42 @@ img {
 
   max-width: 50%;
   max-height: 50%;
+}
+
+.user-link {
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.user-head-div {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  padding: 10px;
+}
+
+.user-head {
+  border: black 2px solid;
+  font-size: 60px;
+  padding: 10px;
+}
+
+.new-dream-btn{
+  position: absolute;
+  margin-left: auto;
+}
+
+.new-dream-card-head{
+  font-style: italic;
+  color: blanchedalmond;
+}
+
+.new-dream-card-body{
+  font-style: italic;
+  background-color: rgb(245, 245, 245);
+  border-color: #c7ed71;
 }

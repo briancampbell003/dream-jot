@@ -7,12 +7,12 @@ router.post("/", async (req, res) => {
   try {
     const dbDreamData = await Dream.create({
       title: req.body.title,
-      date: req.body.date,
       content: req.body.content,
+      date: req.body.date,
+      user_id: req.session.loggedUser,
       tag: req.body.tag,
       private: req.body.private,
       lucid: req.body.lucid,
-      user_id: req.session.loggedUser,
       nightmare: req.body.nightmare,
     });
 
