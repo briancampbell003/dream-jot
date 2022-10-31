@@ -35,7 +35,7 @@ const saveDreamBtnHandler = async (event) => {
       });
 
       if (response.ok) {
-        // document.location.replace('/mydreams');
+        document.location.replace('/mydreams');
       } else {
         alert('Failed to post your new dream.');
       }

@@ -1,54 +1,54 @@
 <form class="form new-dream-form">
-    <div class="form-group">
+    <div class="form-group new-dream-inputs">
         <label for="content">(Optional) Title:</label>
         <input class="form-input" type="text" id="new-dream-title" />
+
         <label for="content">I dreamt...</label>
         <input class="form-input" type="text" id="new-dream-content" />
 
-
-
-        <label for="content">Private?</label>
-        <input class="form-input" type="checkbox" id="private-check" />
-        <label for="content">Lucid dream?</label>
+        <label for="content">Was this a lucid dream?</label>
         <input class="form-input" type="checkbox" id="lucid-check" />
+
+        <label for="content">Make this dream private?</label>
+        <input class="form-input" type="checkbox" id="private-check" />
         <div class="form-group">
-            <label for="customRange2" class="form_label">Nightmare meter:</label>
+            <label for="customRange2" class="form_label">Nightmare meter (0- not scary, to 100- so scray!):</label>
             <input type="range" class="form-range" min="0" max="100" id="nightmare-meter">
         </div>
 
     </div>
 
-    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-        <input type="checkbox" class="btn-check" id="pleasant-tag" autocomplete="off">
-        <label class="btn btn-outline-primary" for="pleasant-tag">Pleasant</label>
+    <div class="dream-tags-selector" role="group" aria-label="Basic checkbox toggle button group">
+        <input type="checkbox" class="btn-check tag-btn" id="pleasant-tag" autocomplete="off">
+        <label class="btn btn-outline-light" for="pleasant-tag">Pleasant</label>
 
-        <input type="checkbox" class="btn-check" id="adventure-tag" autocomplete="off">
-        <label class="btn btn-outline-primary" for="adventure-tag">Adventure</label>
+        <input type="checkbox" class="btn-check tag-btn" id="adventure-tag" autocomplete="off">
+        <label class="btn btn-outline-light" for="adventure-tag">Adventure</label>
 
-        <input type="checkbox" class="btn-check" id="spooky-tag" autocomplete="off">
-        <label class="btn btn-outline-primary" for="spooky-tag">Spooky</label>
+        <input type="checkbox" class="btn-check tag-btn" id="spooky-tag" autocomplete="off">
+        <label class="btn btn-outline-light" for="spooky-tag">Spooky</label>
 
-        <input type="checkbox" class="btn-check" id="nostalgic-tag" autocomplete="off">
-        <label class="btn btn-outline-primary" for="nostalgic-tag">Nostalgic</label>
+        <input type="checkbox" class="btn-check tag-btn" id="nostalgic-tag" autocomplete="off">
+        <label class="btn btn-outline-light" for="nostalgic-tag">Nostalgic</label>
         
-        <input type="checkbox" class="btn-check" id="upsetting-tag" autocomplete="off">
-        <label class="btn btn-outline-primary" for="upsetting-tag">Upsetting</label>
+        <input type="checkbox" class="btn-check tag-btn" id="upsetting-tag" autocomplete="off">
+        <label class="btn btn-outline-light" for="upsetting-tag">Upsetting</label>
 
-        <input type="checkbox" class="btn-check" id="inspiring-tag" autocomplete="off">
-        <label class="btn btn-outline-primary" for="inspiring-tag">Inspiring</label>
+        <input type="checkbox" class="btn-check tag-btn" id="inspiring-tag" autocomplete="off">
+        <label class="btn btn-outline-light" for="inspiring-tag">Inspiring</label>
 
-        <input type="checkbox" class="btn-check" id="intense-tag" autocomplete="off">
-        <label class="btn btn-outline-primary" for="intense-tag">Intense</label>
+        <input type="checkbox" class="btn-check tag-btn" id="intense-tag" autocomplete="off">
+        <label class="btn btn-outline-light" for="intense-tag">Intense</label>
 
-        <input type="checkbox" class="btn-check" id="feverish-tag" autocomplete="off">
-        <label class="btn btn-outline-primary" for="feverish-tag">Feverish</label>
+        <input type="checkbox" class="btn-check tag-btn" id="feverish-tag" autocomplete="off">
+        <label class="btn btn-outline-light" for="feverish-tag">Feverish</label>
 
-        <input type="checkbox" class="btn-check" id="bizarre-tag" autocomplete="off">
-        <label class="btn btn-outline-primary" for="bizarre-tag">Bizarre</label>
+        <input type="checkbox" class="btn-check tag-btn" id="bizarre-tag" autocomplete="off">
+        <label class="btn btn-outline-light" for="bizarre-tag">Bizarre</label>
     </div>
 
     <div class="form-group">
-        <button class="btn btn-primary save-dream-btn" type="submit">save dream</button>
+        <button class="btn btn-dark save-dream-btn" type="submit">save dream</button>
     </div>
 </form>
 

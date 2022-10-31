@@ -10,6 +10,7 @@
 }
 
 body {
+  width: 100vw;
   font-family: Arial;
   margin: 0;
   display: flex;
@@ -76,7 +77,7 @@ nav a:hover {
   background-color: var(--dark);
 }
 
-.gallery {
+/* .gallery {
   flex: 4;
   background-color: #fff;
   padding: 50px;
@@ -84,7 +85,7 @@ nav a:hover {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .btn-no-style {
   background: none;
@@ -102,7 +103,7 @@ img {
   height: auto;
 }
 
-.painting {
+/* .painting {
   width: 50%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -113,7 +114,7 @@ img {
   text-align: center;
   padding: 10px 20px;
   font-weight: bold;
-}
+} */
 
 /* CARDS */
 .card {
@@ -125,16 +126,25 @@ img {
   color: var(--dark);
 }
 
+.login-contain {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+}
+
 .login-card {
-  margin: 0 0 20px 0;
+  height: 300px;
+  margin: 5px;
   flex: 0 0 50%;
-  max-width: 50%;
+  max-width: auto;
   padding: 5px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
+  background-color: var(--secondary);
   color: var(--light);
 }
 
@@ -153,7 +163,7 @@ img {
   text-align: center;
   font-weight: bold;
 }
-
+/* 
 .gallery-name {
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -163,7 +173,7 @@ img {
   padding-bottom: 30px;
   padding-right: 100px;
   padding-left: 100px;
-}
+} */
 
 /* LAYOUT */
 .container {
@@ -185,7 +195,7 @@ img {
   justify-content: center;
   align-content: center;
   justify-items: center;
-
+  margin-top: 10%;
   max-width: 50%;
   max-height: 50%;
 }
@@ -212,18 +222,38 @@ img {
   padding: 10px;
 }
 
-.new-dream-btn{
+.new-dream-btn {
   position: absolute;
   margin-left: auto;
 }
 
-.new-dream-card-head{
+.new-dream-card-head {
   font-style: italic;
   color: blanchedalmond;
 }
 
-.new-dream-card-body{
+.new-dream-card-body {
   font-style: italic;
   background-color: rgb(245, 245, 245);
   border-color: #c7ed71;
+}
+
+.new-dream-inputs {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.dream-tags-selector {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.tag-btn {
+  border-radius: 3px;
+}
+
+.save-dream-btn {
+  position: relative;
+  margin-left: 35%;
 }
