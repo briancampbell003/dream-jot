@@ -25,6 +25,7 @@ router.get('/newdream', withAuth, async (req, res) => {
   }
 });
 
+// GET my dreams
 router.get('/mydreams', withAuth, async (req, res) => {
   try {
     const dbDreamData = await Dream.findAll({
@@ -48,6 +49,7 @@ router.get('/mydreams', withAuth, async (req, res) => {
   }
 });
 
+// GET user dreams
 router.get('/user/:id', withAuth, async (req, res) => {
   try {
     const dbDreamData = await Dream.findAll({
@@ -75,6 +77,7 @@ router.get('/user/:id', withAuth, async (req, res) => {
   }
 });
 
+// GET single dream
 router.get('/dream/:id', withAuth, async (req, res) => {
   try {
     const dbDreamData = await Dream.findByPk(req.params.id, {
@@ -83,6 +86,7 @@ router.get('/dream/:id', withAuth, async (req, res) => {
       ]
     });
     const dream = dbDreamData.get({ plain: true });
+    console.log(dream);
     res.render('singledream', { dream, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
@@ -90,6 +94,7 @@ router.get('/dream/:id', withAuth, async (req, res) => {
   }
 });
 
+// GET all users and all dreams
 router.get('/community', withAuth, async (req, res) => {
   try {
     const dbDreamData = await Dream.findAll({
@@ -117,6 +122,7 @@ router.get('/community', withAuth, async (req, res) => {
   }
 });
 
+// GET login page
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');

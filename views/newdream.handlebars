@@ -4,20 +4,25 @@
         <input class="form-input" type="text" id="new-dream-title" />
 
         <label for="content">I dreamt...</label>
-        <input class="form-input" type="text" id="new-dream-content" />
+        <input class="form-input" type="textarea" id="new-dream-content" />
 
-        <label for="content">Was this a lucid dream?</label>
-        <input class="form-input" type="checkbox" id="lucid-check" />
+        <div class="form-y/n-questions">
+            <label for="content">Was this a lucid dream?</label>
+            <input class="form-input" type="checkbox" id="lucid-check" />
+        </div>
+        <div class="form-y/n-questions">
+            <label for="content">Make this dream private?</label>
+            <input class="form-input" type="checkbox" id="private-check" />
+        </div>
 
-        <label for="content">Make this dream private?</label>
-        <input class="form-input" type="checkbox" id="private-check" />
         <div class="form-group">
-            <label for="customRange2" class="form_label">Nightmare meter (0- not scary, to 100- so scray!):</label>
+            <label for="customRange2" class="form_label">Nightmare meter (0- not scary, to 100- so scary!):</label>
             <input type="range" class="form-range" min="0" max="100" id="nightmare-meter">
         </div>
 
     </div>
 
+    <p>Select tags:</p>
     <div class="dream-tags-selector" role="group" aria-label="Basic checkbox toggle button group">
         <input type="checkbox" class="btn-check tag-btn" id="pleasant-tag" autocomplete="off">
         <label class="btn btn-outline-light" for="pleasant-tag">Pleasant</label>

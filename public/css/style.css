@@ -51,14 +51,6 @@ main {
   flex-grow: 1;
 }
 
-aside {
-  flex: 0;
-  background-color: var(--tertiary);
-  padding: 80px;
-  text-align: left;
-  color: var(--light);
-}
-
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -77,16 +69,6 @@ nav a:hover {
   background-color: var(--dark);
 }
 
-/* .gallery {
-  flex: 4;
-  background-color: #fff;
-  padding: 50px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-} */
-
 .btn-no-style {
   background: none;
   border: none;
@@ -103,27 +85,14 @@ img {
   height: auto;
 }
 
-/* .painting {
-  width: 50%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-}
-
-.painting-details {
-  text-align: center;
-  padding: 10px 20px;
-  font-weight: bold;
-} */
-
 /* CARDS */
 .card {
   margin: 20px;
   flex: 0 1 300px;
-  border: 7px double var(--dark);
+  border: 7px double black;
   border-radius: 10px;
   background-color: var(--light);
-  color: var(--dark);
+  color: black;
 }
 
 .login-contain {
@@ -156,6 +125,7 @@ img {
   background-color: var(--tertiary);
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+  border-bottom: 2px solid black;
 }
 
 .card-body {
@@ -163,19 +133,7 @@ img {
   text-align: center;
   font-weight: bold;
 }
-/* 
-.gallery-name {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 5px var(--secondary);
-  border: 10px groove var(--light);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-right: 100px;
-  padding-left: 100px;
-} */
 
-/* LAYOUT */
 .container {
   display: flex;
   flex-flow: column wrap;
@@ -183,6 +141,7 @@ img {
   align-items: center;
 }
 
+/* HOME PAGE */
 #bannerImg {
   position: relative;
   top: 0px;
@@ -195,17 +154,12 @@ img {
   justify-content: center;
   align-content: center;
   justify-items: center;
-  margin-top: 10%;
+  margin-top: 10vh;
   max-width: 50%;
   max-height: 50%;
 }
 
-.user-link {
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
+/* USER DREAMS PAGE */
 .user-head-div {
   margin-left: auto;
   margin-right: auto;
@@ -227,15 +181,35 @@ img {
   margin-left: auto;
 }
 
+.new-dream-card {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 7px double black;
+  border-radius: 10px;
+  background-color: white;
+}
+
 .new-dream-card-head {
   font-style: italic;
-  color: blanchedalmond;
+  color: #c7ed71;
 }
 
 .new-dream-card-body {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
   font-style: italic;
-  background-color: rgb(245, 245, 245);
-  border-color: #c7ed71;
+  background-color:white;
+  height: auto;
+}
+
+/* NEW DREAM INPUT PAGE */
+.new-dream-form {
+  margin: auto;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .new-dream-inputs {
@@ -246,6 +220,7 @@ img {
 .dream-tags-selector {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -254,6 +229,71 @@ img {
 }
 
 .save-dream-btn {
-  position: relative;
-  margin-left: 35%;
+  margin: 25px;
+}
+
+/* COMMUNITY PAGE */
+.community-contain {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.comm-head-div {
+  flex-basis: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  padding: 10px;
+}
+
+.community-users {
+  width: fit-content;
+  flex: 0;
+  background-color: var(--tertiary);
+  padding: 20px 30px 20px;
+  text-align: left;
+  color: black;
+}
+
+.community-dreams {
+  padding: 20px 30px 20px;
+}
+
+.user-link {
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+
+/* MOBILE RESPONSIVE CHANGES */
+@media screen and (max-width: 768px) {
+  main,
+  nav,
+  .community-contain {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 5px 10px;
+  }
+  /* Make the sidebar stack below the body */
+  aside {
+    order: 2;
+  }
+
+  #newDreamLink {
+    margin-top: 0;
+  }
+
+  .new-dream-form {
+    margin: auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
