@@ -1,14 +1,13 @@
-const deleteDreamBtnHandler = async (event) => {
-    event.preventDefault();
-    console.log("delete dream button has been pressed!!");
-
-    fetch("/api/dreams/id")
-        .then((response) => response.json())
-        .then((result) => console.log(result))
-
-
+const deleteDream = async () => {
+  const getId = document.location.pathname.replace("/dream/", "");
+  const info = await fetch(`/api/dreams/${getId}`, {
+    method: "DELETE",
+  });
+  const json = await info.json();
 };
 
-document
-    .querySelector('.delete-dream-button')
-    .addEventListener('click', deleteDreamBtnHandler);
+const delBtn = document.querySelector(".delete-dream-btn");
+delBtn.addEventListener("click", async () => {
+  await deleteDream();
+  document.location = "/mydreams";
+});
