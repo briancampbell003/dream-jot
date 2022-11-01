@@ -7,9 +7,15 @@ const dreamdata = [
     content: 'Sun setting in the horizon with waves lapping the shore.',
     date: 'August 14, 2016',
     user_id: 1,
-    tag: 'pleasant',
-    private: false,
-    lucid: false,
+    // tag: [
+    //   'false', 'true',
+    //   'true',  'false',
+    //   'false', 'false',
+    //   'true',  'true',
+    //   'false'
+    // ],
+    private: 0,
+    lucid: 0,
     nightmare: 0,
   },
   {
@@ -17,9 +23,15 @@ const dreamdata = [
     content: 'Me and my friends all ice-skating down a frozen river.',
     date: 'August 19, 2016',
     user_id: 1,
-    tag: 'pleasant',
-    private: false,
-    lucid: true,
+    // tag: [
+    //   'false', 'true',
+    //   'true',  'false',
+    //   'false', 'false',
+    //   'true',  'true',
+    //   'false'
+    // ],
+    private: 0,
+    lucid: 1,
     nightmare: 5,
   },
   {
@@ -27,9 +39,15 @@ const dreamdata = [
     content: 'At my high school physics class and we have a big test but I forgot to study',
     date: 'August 20, 2016',
     user_id: 2,
-    tag: 'nightmare',
-    private: false,
-    lucid: false,
+    // tag: [
+    //   'false', 'true',
+    //   'true',  'false',
+    //   'false', 'false',
+    //   'true',  'true',
+    //   'false'
+    // ],
+    private: 0,
+    lucid: 0,
     nightmare: 85,
   },
   {
@@ -37,9 +55,15 @@ const dreamdata = [
     content: 'Getting attacked by evil humanoid machines',
     date: 'August 22, 2016',
     user_id: 2,
-    tag: 'nightmare',
-    private: false,
-    lucid: false,
+    // tag: [
+    //   'false', 'true',
+    //   'true',  'false',
+    //   'false', 'false',
+    //   'true',  'true',
+    //   'false'
+    // ],
+    private: 0,
+    lucid: 0,
     nightmare: 99,
   },
   {
@@ -47,9 +71,15 @@ const dreamdata = [
     content: 'Going on an epic journey to rescue my cousin from a castle',
     date: 'August 23, 2016',
     user_id: 2,
-    tag: 'adventure',
-    private: false,
-    lucid: true,
+    // tag: [
+    //   'false', 'true',
+    //   'true',  'false',
+    //   'false', 'false',
+    //   'true',  'true',
+    //   'false'
+    // ],
+    private: 0,
+    lucid: 1,
     nightmare: 50,
   },
 
