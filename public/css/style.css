@@ -314,4 +314,9 @@ img {
     flex-direction: column;
     align-items: center;
   }
+  .community-users {
+    margin: auto;
+    text-align: center;
+    border: 2px solid black;
+  }
 }
