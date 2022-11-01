@@ -268,6 +268,24 @@ img {
   margin-bottom: 10px;
 }
 
+/* SINGLE DREAM PAGE */
+.single-dream-contain {
+  margin: auto;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.single-dream-content {
+  padding: 5px;
+  border: black 2px solid;
+  border-radius: 5px;
+  color: var(--light);
+  font-style: italic;
+  background-color: #524171;
+}
+
 
 /* MOBILE RESPONSIVE CHANGES */
 @media screen and (max-width: 768px) {
