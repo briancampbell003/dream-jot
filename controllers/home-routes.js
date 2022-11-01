@@ -54,7 +54,8 @@ router.get('/user/:id', withAuth, async (req, res) => {
   try {
     const dbDreamData = await Dream.findAll({
       where: {
-        user_id: req.params.id
+        user_id: req.params.id,
+        private: false,
       },
       include: [
         { model: User }
