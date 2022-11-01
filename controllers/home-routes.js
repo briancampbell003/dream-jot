@@ -87,7 +87,7 @@ router.get('/dream/:id', withAuth, async (req, res) => {
       ]
     });
     const dream = dbDreamData.get({ plain: true });
-    console.log(dream);
+    console.log(dream.tags);
     res.render('singledream', { dream, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
