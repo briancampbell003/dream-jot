@@ -211,6 +211,11 @@ img {
   flex-direction: column;
   align-items: center;
 }
+#new-dream-content {
+  height: 150px;
+  display: flex;
+  flex-flow: row wrap;
+}
 
 .new-dream-inputs {
   display: flex;
@@ -271,6 +276,7 @@ img {
 /* SINGLE DREAM PAGE */
 .single-dream-contain {
   margin: auto;
+  margin-top: 10px;
   width: 40vw;
   display: flex;
   flex-direction: column;
@@ -284,6 +290,14 @@ img {
   color: var(--light);
   font-style: italic;
   background-color: #524171;
+}
+
+.single-dream-questions {
+  margin-top: 15px;
+}
+
+.delete-dream-btn {
+  margin-top: 20px;
 }
 
 
@@ -318,5 +332,8 @@ img {
     margin: auto;
     text-align: center;
     border: 2px solid black;
+  }
+  .single-dream-contain {
+    width: 80vw;
   }
 }

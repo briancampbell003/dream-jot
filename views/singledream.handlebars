@@ -4,10 +4,14 @@
   <section class="flex-row justify-center">
     <div class="single-dream-content">{{dream.content}}</div>
   </section>
-  <section>
+  <section class="single-dream-questions">
     <div>lucid dream? {{dream.lucid}}</div>
     <div>nightmare scale: {{dream.nightmare}} out of 100!</div>
+    {{#if dream.tag}}
     <div>tags: {{format_tags dream.tag}}</div>
+    {{else}}
+    <div>tags: None</div>
+    {{/if}}
   </section>
 
   <div class="form-group">

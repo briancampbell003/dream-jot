@@ -25,7 +25,7 @@ const saveDreamBtnHandler = async (event) => {
       nightmare : document.querySelector('#nightmare-meter').value,
     }
 
-    console.log(newDream);
+    console.log(newDream.tag);
     
     if (newDream) {
       const response = await fetch('/api/dreams', {
