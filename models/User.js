@@ -44,13 +44,7 @@ User.init(
         return newUserData;
       },
     },
-    // hooks: {
-    //   async beforeCreate(newUserData) {
-    //     newUserData.login = await newUserData.login.toLowerCase();
-    //     return newUserData
-    //   },
-    //   beforeUpdate: async (updatedU)
-    // },
+
     sequelize,
     timestamps: false,
     freezeTableName: true,
