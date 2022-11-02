@@ -6,6 +6,6 @@ const newDreamBtnHandler = (event) => {
   
   document
     .querySelector('.new-dream-btn')
-    .addEventListener('click', newDreamBtnHandler);
+    .addEventListener('click', newDreamBtnHandler)
   
   

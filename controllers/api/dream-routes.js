@@ -26,4 +26,20 @@ router.post("/", async (req, res) => {
   }
 });
 
+// delete dream
+router.delete("/:id", async (req, res) => {
+  try {
+    console.log("Connected____DELETE");
+    const deletedId = req.params.id;
+    const deletedData = await Dream.destroy({
+      where: {
+        id: deletedId,
+      },
+    });
+    return res.json(deletedData);
+  } catch (err) {
+    res.send(err);
+  }
+});
+
 module.exports = router;

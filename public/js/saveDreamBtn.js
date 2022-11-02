@@ -25,7 +25,7 @@ const saveDreamBtnHandler = async (event) => {
       nightmare : document.querySelector('#nightmare-meter').value,
     }
 
-    console.log(newDream);
+    console.log(newDream.tag);
     
     if (newDream) {
       const response = await fetch('/api/dreams', {
@@ -35,7 +35,7 @@ const saveDreamBtnHandler = async (event) => {
       });
 
       if (response.ok) {
-        // document.location.replace('/mydreams');
+        document.location.replace('/mydreams');
       } else {
         alert('Failed to post your new dream.');
       }

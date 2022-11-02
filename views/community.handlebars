@@ -1,11 +1,19 @@
-<aside>
-    {{#each users as |user|}}
-    {{> user-link}}
-    {{/each}}
-</aside>
+<div class="community-contain">
+    <aside class="community-users">
+        <div class="comm-head-div">
+            <h4>dreamer pages:</h4>
+        </div>
+        {{#each users as |user|}}
+        {{> user-link}}
+        {{/each}}
+    </aside>
 
-<container class="flex-row justify-center">
-    {{#each dreams as |dream|}}
-    {{> dream-card}}
-    {{/each}}
-<container>
+    <container class="flex-row justify-center card-holder community-dreams">
+        <div class="comm-head-div">
+            <h4>recent dreams:</h4>
+        </div>
+        {{#each dreams as |dream|}}
+        {{> dream-card}}
+        {{/each}}
+    <container>
+</div>
