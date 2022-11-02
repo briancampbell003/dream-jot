@@ -7,7 +7,11 @@
   <section>
     <div>lucid dream? {{dream.lucid}}</div>
     <div>nightmare scale: {{dream.nightmare}} out of 100!</div>
+    {{#if dream.tag}}
     <div>tags: {{format_tags dream.tag}}</div>
+    {{else}}
+    <div>tags: None</div>
+    {{/if}}
   </section>
 
   <div class="form-group">
