@@ -98,23 +98,29 @@ img {
 .login-contain {
   width: 100vw;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
   margin: 10px;
 }
 
 .login-card {
   height: 300px;
+  width: auto;
   margin: 5px;
-  flex: 0 0 50%;
-  max-width: auto;
+  /* flex: 0 0 50%; */
   padding: 5px;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
   background-color: var(--secondary);
-  color: var(--light);
+  color: whitesmoke
+}
+
+.login-btns {
+  margin-top: 10px;
+  position: relative;
+  left: 5%;
 }
 
 .card header {
