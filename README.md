@@ -6,7 +6,7 @@
 
 ## Description
 
-Record your dreams daily and access a log of your dreams to notice patterns and become more in touch with your subconcious. Connect with other dreamers by visiting the Community page.
+App allowing users to record their dreams, access log of previous dreams and connect with other dreamers through the Community page. Front-end uses Handlebars.js, back-end powered by MySQL via Sequelize.
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ Record your dreams daily and access a log of your dreams to notice patterns and 
 
 ## Installation
 
-Visit the deployed Heroku page to create an account and start posting dreams!
+Visit the [deployed Heroku page](https://dream-jot.herokuapp.com/) to create an account and start logging your dreams.
 
 ## Usage
 
